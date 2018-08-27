@@ -37,7 +37,7 @@ public class BubbleSort {
 
         long lStartTime = startTimer();
 
-        while(swapped && limit<10000) {
+        while(swapped && limit<10000000) { // make sure it doesn't run forever
             swapped = false;
             for(int i=0; i < n-1; i++){   
                 if(inputList[i+1] < inputList[i]){
@@ -46,8 +46,8 @@ public class BubbleSort {
                     inputList[i+1] = tmp;
                     swapped = true;
                 }
-            }
-            limit ++;
+                limit ++;
+            }      
         }
 
         out("");
