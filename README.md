@@ -17,3 +17,12 @@ Each solution will have the following format:
     Performance:
  
 ```
+
+# Algorithms
+
+insersion sort
+quick sort
+merge sort
+heap sort
+bubble sort
+counting sort
