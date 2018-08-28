@@ -26,7 +26,6 @@ Bubble sort is a comparison​-based algorithm that compares each pair of elemen
         int []outputList = inputList;
         boolean swapped = false;
         
-
         for(int j=n; j > 0; j--){   
             swapped = false;
             for(int i=0; i < j-1; i++){   
@@ -38,7 +37,6 @@ Bubble sort is a comparison​-based algorithm that compares each pair of elemen
                 }                                
                 ctr++;
             }    
-
             n--;
             
             if(!swapped){ 
@@ -49,7 +47,6 @@ Bubble sort is a comparison​-based algorithm that compares each pair of elemen
         out("\n# of iterations: " +  ctr);
 
         return outputList;
-
     }
 
 
