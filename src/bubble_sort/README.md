@@ -16,33 +16,46 @@ Bubble sort is a comparison​-based algorithm that compares each pair of elemen
 
 ```java
 
- public static double[] sort(double []inputList){
+    public class BubbleSort {
+        ...
+
+
+    public static int[] sort(int []inputList){
         int n = inputList.length;
-        boolean swapped = true;
-        int limit = 0;
+        int ctr = 1;
+        int []outputList = inputList;
+        boolean swapped = false;
+        
 
-        long lStartTime = startTimer();
-
-        while(swapped && limit<10000000) { // make sure it doesn't run forever
+        for(int j=n; j > 0; j--){   
             swapped = false;
-            for(int i=0; i < n-1; i++){   
-                if(inputList[i+1] < inputList[i]){
-                    double tmp = inputList[i];
-                    inputList[i] = inputList[i+1];
-                    inputList[i+1] = tmp;
+            for(int i=0; i < j-1; i++){   
+                if(outputList[i] > outputList[i+1]){
+                    int tmp = outputList[i];
+                    outputList[i] = outputList[i+1];
+                    outputList[i+1] = tmp;
                     swapped = true;
-                }
-                limit ++;
-            }      
-        }
+                }                                
+                ctr++;
+            }    
 
-        endTimer(lStartTime);
-        out("How many iterations ? " + limit);
+            n--;
+            
+            if(!swapped){ 
+                break; 
+            }
+        }    
 
-        return inputList;
+        out("\n# of iterations: " +  ctr);
+
+        return outputList;
 
     }
 
+
+
+        ...
+    }// end BubbleSort
 ```
 
 ##    Performance:
